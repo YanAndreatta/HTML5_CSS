@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua nacionalidade</title>
+</head>
+<body>
+    <h1>Sua Nacionalidade</h1>
+    Qual país você mora ? <input type="text" name="txtp" id="txtp">
+    <input type="button" value="pesquisar" onclick="verificar()">
+    <div id = "res"></div>
+
+    <script>
+        function verificar() {
+            var p = (window.document.querySelector('input#txtp').value)
+            var res = window.document.querySelector('div#res')
+            //var p2 = String(p.value)
+            if (p == "brasil") {
+                res.innerHTML = "<p>Você é Brasileiro</p>"
+            } else {
+                res.innerHTML = "<p>Você é estrangeiro</p>"
+                res.innerHTML += `<p>O país que você mora é: ${p}</p>` 
+            }
+        }
+    </script>
+</body>
+</html>
