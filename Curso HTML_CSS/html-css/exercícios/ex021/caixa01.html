@@ -6,25 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo de Caixas</title>
     <style>
-        h1 {
+        h1 { /* Box-Level */
+
             background-color: lightgray;
+
+            /* Box-Size */
             height: 300px;
             width: 300px;
+
+            /* simplificação do border */
+            border: 10px solid darkseagreen;
+
             border-width: 10px;
             border-style: solid;
             border-color: darkseagreen;
             
-
+            /* simplificação do padding */
+            padding: 10px 10px 10px 10px;
+            /* Caso todas as distâncias forem iguals apenas declarar 'padding: 10px' */
+            /* Caso a parte de cima e debaixo sejam iguais, assim como a direita e a esquerda declare 'padding: 10px 20px'  ---> top=10, right=20, bottom=10, left=20 */
             padding-top: 10px;
             padding-right: 10px;
             padding-bottom: 10px;
             padding-left: 10px;
+
+            /* simplificação do margin */
+            margin: 10px 20px 40px 20px;
+            /* margin: 20px auto 40px auto; --> vai centralizar as margens laterais*/
+            /* margin: auto; centraliza o box*/
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            margin-left: 20px;
+
+            /* simplificação do outline */
+            outline: 5px dashed salmon;
+
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon;
         }
 
-        a {
+        a { /* Inline-level */
+            /* simplificação */
+            border: 10px solid red;
+
             border-width: 10px;
             border-style: solid;
             border-color: red;
+
+            /* simplificação */
+            padding: 10px 10px 10px 10px; /* ou também padding: 10px;*/
 
             padding-top: 10px;
             padding-right: 10px;
